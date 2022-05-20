@@ -32,4 +32,57 @@ The table 'Suppressed rides' is related with 'Companies' through the companies' 
     \caption{ER model of the Dashboard}
     \label{fig:ER}
 \end{figure}
+\section{Dashboard}
 
+Starting from these tables, a dashboard is designed. It will be divided in subcategories that differ each other for the topic shown. In particular, the themes approached are:
+\begin{itemize}
+\item Suppressed rides
+\item Emissions
+\item Operative performances
+\item KPIs correlation
+\item Economics
+\end{itemize}
+\subsection{Suppressed rides}
+In the following page has been presented the dashboard
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Suppressed}}]{dashboard/Suppression.pdf}
+\end{landscape}
+\newpage
+As said before, data about suppressed rides are between 2017 and 2019. An area of this part of the page is dedicated to filters, thanks to which data can be visualized according to:
+\begin{itemize}
+\item  period of time with a level of detail equal to a month
+\item line
+\item reason for which the ride was suppressed
+\end{itemize}
+Obviously, these filters could be used at the same time in order to obtain very specific analysis.
+
+The table on the bottom right shows the number of rides traveled per each ride suppressed for each company. So, a low number corresponds to a bad result for the company. This data is computed in a relative way in order to show if a company has bad performances according to its dimension. A ride suppressed for a small company is not comparable with few rides suppressed for a big one. 
+
+The pie chart has the goal of showing how the different causes affects suppressed rides, while the histogram shows the total suppressed rides for each year divided by company. 
+
+Considering the dashboard without applying any filter, some considerations can be already done. In 2017 Sab/ai had a huge issue with suppressed rides that reached a percentage level double than the second highest one, in the analyzed period. In 2017 and 2018 Sai and Zani had no problems and their suppressed rides are equal to zero. Finally, Agi had a ever increasing problem related to suppressed rides. 
+
+Moreover, the main cause that brings to a suppressed ride is strike followed at a distance by failure happened during service and inconvenience due to drivers during service. 
+
+Finally, companies with performances below Consortium average are Agi and Sab/ai with, respectively, a ride suppressed every 2,118 and 1,528 rides traveled. 
+
+\newpage
+
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90,  pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Suppressed for strikes}\label{fig:strikes}}]{dashboard/Suppression_for_strikes.pdf}
+\end{landscape}
+\newpage
+
+A focus on the strikes, shown in figure \ref{fig:strikes}, gives several information. Strikes are the reason of the abnormal problems tha Sab/ai had in 2017, moreover a strike in 2019 hit almost every company in an equal measure and, finally, Agi growing issues during this period are reflected also in strikes trend. 
+
+Filtering data according to failure happened during service, a very interesting result is shown: half of the total failures happened during the three year in the Consortium happened during a ride performed by Agi even if Agi is one of the companies with less kilometers run per year. Moreover, this problem in absolute terms remains constant during the year and the negative trend of Agi is due to the increasing of other issues that in 2017 were almost absent.
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Focus on Agi and fault on the line}\label{fig:strikes}}]{dashboard/Suppression_for_fail_on_the_line.pdf}
+\end{landscape}
+\newpage
