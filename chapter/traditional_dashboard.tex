@@ -86,3 +86,45 @@ Filtering data according to failure happened during service, a very interesting 
 \includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Focus on Agi and fault on the line}\label{fig:failline}}]{dashboard/Suppression_for_fail_on_the_line.pdf}
 \end{landscape}
 \newpage
+
+\subsection{Fleet}
+
+The second part of the dashboard regards an overview of the fleet based on the aspect that are underlined in the contract of service and that should be considered as constraint for a good fleet management, even if not all of them brings directly to a penalty from the Public Transport Authority. 
+In particular, in the contract the PTA requires the following fleet criteria:
+\begin{itemize}
+\item $100\%$ buses must be air-conditioned
+\item $91\%$ accessible for people with reduced mobility
+\item  $100\%$ eco-diesel
+\item at least $62\%$ Euro V, Euro VI, EEV or technologies with better emission performances.
+\item  age restrictions:
+    \begin{itemize}
+        \item No restrictions if the age is lower of 18 years
+        \item Travel limitation between 19 and 21 years, they can't be over $20\%$ of the total fleet
+        \item Not allowed if they are over 22 years
+    \end{itemize}
+\end{itemize}
+The figure \ref{fig:fleet}
+shows the fleet situation in 2020, that is the most recent situation available. Data about 2018 and 2019 fleet are also available, so that comparison between these years can be done. Each aspect listed before is summed up in a pie chart that let a clear visualization of the situation.
+
+Beginning from the good aspects, the entire fleet uses an eco-diesel fuel and almost every bus is equipped to allow the transport of people with reduced mobility. 
+In Italy the average fleet age is about 12 years\cite{rossiPTM}, but in 2020 the Consortium results are even better with an average age of about 10 years. Despite this, 10 buses have an age that obliges them to suffer travel limitations and the $13\%$ in the immediate future will be in this situation. 
+On the other side, as much as 8 buses are not equipped with air conditioning and, according to the contract of service, they should not travel. Finally, it is possible analyze the fleet according to their emission category. The requirements set by the contract ($62\%$) are widely satisfied, but the improvement margin is really high since the $30\%$ of the fleet has an high polluting engine. 
+
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Fleet dashboard}\label{fig:fleet}}]{dashboard/emission.pdf}
+\end{landscape}
+\newpage
+
+In the figure \ref{fig:fleetold}  a focus on the oldest part of the fleet in 2020, the one that has constraint on traveled kilometers. 
+It can be seen that the majority of those buses are also the ones that are not air-conditioned, so, if they are replaced with new ones, two bad situations can be improved . Moreover, two of the three buses not equipped for people with reduced mobility belongs to this category. Unfortunately, if they are removed, an important percentage of not polluting buses would be lost. In fact, the $5\%$ of the fleet is composed of old buses with a swapped engine in order to respect contract limitations. Finally, the presence of buses with an age over 17 years is really increased respect to 2018, with a rise of over $200\%$.
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Focus on old fleet}\label{fig:fleetold}}]{dashboard/fleet_old_2020.pdf}
+\end{landscape}
+\newpage
+
