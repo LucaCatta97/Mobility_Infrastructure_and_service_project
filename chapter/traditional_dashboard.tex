@@ -1,4 +1,4 @@
-\chapter{Traditional dashboard}
+\chapter{Analysis on the provided data}
 %The dashboard created on PowerBI 
 From the KPIs founded in the analysis of the contract we decide to visualize them by creating an off-line dashboard with PowerBi to find other useful information that without visualization could go on the background.
 
@@ -128,3 +128,42 @@ It can be seen that the majority of those buses are also the ones that are not a
 \end{landscape}
 \newpage
 
+\subsection{Operative performances}
+The aim of this page is to present the average of rides made by the companies of the consortium. 
+In figure \ref{fig:op} in bootom there are the two filter that allow us to select the Lines and the Year.
+In the middele there is on the left the average of the percentage of rides made by the companies\footnote{the reader can argue that some of the companies has a percentage of ride mades up to $100\%$ but they had suppression in the previous page. This is due to the fact that the quantity of suppression is very low with respect to the rides made each month by the companies. For this reason in the data can have been approximated}. On the right the commercial speed divided by lines.
+
+In the end on the top the correlation between the average percentage of rides made and the commercial speed per companies.
+
+With only this view can been seen four cluster of companies:
+\begin{itemize}
+    \item \textbf{sai} and \textbf{tbso} that has less than 28 km/h
+    \item \textbf{locatelli} near 30 km/h
+    \item \textbf{arriva}, \textbf{zani} around 35 km/h
+    \item \textbf{agi} that are above 38 km/h 
+\end{itemize}
+This result, if combinied with the timetable of the service (not provided) can help to find the compny with the high performance. With the information provided can not be sure that agi is the member with higher performance because it depnds on the lines that agi made and on the time in which it operates. 
+
+The previous analysis can be focused on the lines as follow below.
+
+\paragraph{Comparison between Arriva and Locatelli on line R} An example of comparison has been made by selcting the line R and it is reported in figure \ref{fig:locai}. In the top graph can be see that Arriva has a high performance both on the commercial speed (above 35 km/h) and an average of rides made near $100\%$. Instead, Locatelli has lower performances in both way. 
+
+Actually this can not be said without the timetable because Agi can be asignecd in low demand hours and locatelli make only peak-hours. It is a bus services so make the service in the peak-hours it is inlfuenced by the traffic of private car.
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Operativ performances}\label{fig:op}}]{dashboard/operative_performances.pdf}
+\end{landscape}
+\newpage
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Focus on old fleet}\label{fig:locai}}]{dashboard/comparison_arriva_locatelli.pdf}
+\end{landscape}
+\newpage
+
+\subsection{correlation}
+
+\subsection{income}
