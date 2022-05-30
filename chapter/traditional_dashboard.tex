@@ -121,19 +121,29 @@ On the other side, as much as 8 buses are not equipped with air conditioning and
 In the figure \ref{fig:fleetold}  a focus on the oldest part of the fleet in 2020, the one that has constraint on traveled kilometers. 
 It can be seen that the majority of those buses are also the ones that are not air-conditioned, so, if they are replaced with new ones, two bad situations can be improved . Moreover, two of the three buses not equipped for people with reduced mobility belongs to this category. Unfortunately, if they are removed, an important percentage of not polluting buses would be lost. In fact, the $5\%$ of the fleet is composed of old buses with a swapped engine in order to respect contract limitations. Finally, the presence of buses with an age over 17 years is really increased respect to 2018, with a rise of over $200\%$.
 
+
+The third dashboard (figure \ref{fig:fleetinquinanti}) is a focus on the most polluting part of the 2020 fleet, so buses with Euro 3 and Euro 4 standard technology. Fortunately, the majority of them has the less polluting engine, symptom of good turnover of the fleet during the previously years. Theoretically, their presence in the fleet is not against the rules written in the Service Contract, but from a modern point of view, they could be a stain in terms of sustainability and green attitude. In particular, in this dashboard an analysis about the newest subpart of fleet, the buses under 15 years, is performed. This focus is motivated by the fact that, despite their polluting nature, according to the contract, these buses could travel for many years (at least 6) on Bergamo province streets. So, these buses are all air-conditioned and designed for people with reduced mobility. Despite the set constraint of an age under 15 years, their average age is really high, 14 years, showing that their matriculation happened in a small period of time. Moreover, their decrease is consistent and regular in the last years and this shows a huge presence among buses that have not yet contractual restrictions. This last consideration is confirmed by the previous dashboard. Since this part of the fleet has several years in front of it and since its characteristics respect all the contract requirements, a suggestion could be an engine swapping with a less polluting standard then an expensive turnover of the entire fleet, or better, a mix of the two solutions.
 \newpage
 \begin{landscape}
 \thispagestyle{empty}
-\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Focus on old fleet}\label{fig:fleetold}}]{dashboard/fleet_old_2020.pdf}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Focus on old fleet}\label{fig:fleetinquinanti}}]{dashboard/fleet_old_2020.pdf}
+\end{landscape}
+\newpage
+
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Focus on old fleet}\label{fig:fleetold}}]{dashboard/fleet_inquinanti.pdf}
 \end{landscape}
 \newpage
 
 \subsection{Operative performances}
-The aim of this page is to present the average of rides made by the companies of the consortium. 
-In figure \ref{fig:op} in bootom there are the two filter that allow us to select the Lines and the Year.
-In the middele there is on the left the average of the percentage of rides made by the companies\footnote{the reader can argue that some of the companies has a percentage of ride mades up to $100\%$ but they had suppression in the previous page. This is due to the fact that the quantity of suppression is very low with respect to the rides made each month by the companies. For this reason in the data can have been approximated}. On the right the commercial speed divided by lines.
+The aim of this page is to present the ratio of rides made by the companies of the consortium. 
+In the bottom part of the figure \ref{fig:op} there are two filters that allow the selection of Lines and Years.
+Above them,  the average of the percentage of rides made by the companies\footnote{the reader can argue that some of the companies has a percentage of ride made up to $100\%$ but they had suppression in the previous page. This is due to the fact that the quantity of suppression is very low with respect to the rides made each month by the companies. For this reason in the data can have been approximated}. Moreover, these data include 2020 and 2021, so companies with good performances before could have suffered diseases due to Covid-19. On the right, the commercial speed divided by lines is shown.
 
-In the end on the top the correlation between the average percentage of rides made and the commercial speed per companies.
+Finally, on the top the correlation between the average percentage of rides made and the commercial speed per companies.
 
 With only this view can been seen four cluster of companies:
 \begin{itemize}
@@ -142,28 +152,53 @@ With only this view can been seen four cluster of companies:
     \item \textbf{arriva}, \textbf{zani} around 35 km/h
     \item \textbf{agi} that are above 38 km/h 
 \end{itemize}
-This result, if combinied with the timetable of the service (not provided) can help to find the compny with the high performance. With the information provided can not be sure that agi is the member with higher performance because it depnds on the lines that agi made and on the time in which it operates. 
+This result, if combined with the timetable of the service (not provided) can help to find the company with the better performances. With the information provided can not be sure that agi is the member with better performance because it depends on the route that agi buses travel and on the time in which it operates. 
 
-The previous analysis can be focused on the lines as follow below.
 
-\paragraph{Comparison between Arriva and Locatelli on line R} An example of comparison has been made by selcting the line R and it is reported in figure \ref{fig:locai}. In the top graph can be see that Arriva has a high performance both on the commercial speed (above 35 km/h) and an average of rides made near $100\%$. Instead, Locatelli has lower performances in both way. 
-
-Actually this can not be said without the timetable because Agi can be asignecd in low demand hours and locatelli make only peak-hours. It is a bus services so make the service in the peak-hours it is inlfuenced by the traffic of private car.
 
 \newpage
 \begin{landscape}
 \thispagestyle{empty}
-\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Operativ performances}\label{fig:op}}]{dashboard/operative_performances.pdf}
-\end{landscape}
-\newpage
-
-\newpage
-\begin{landscape}
-\thispagestyle{empty}
-\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Focus on old fleet}\label{fig:locai}}]{dashboard/comparison_arriva_locatelli.pdf}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{5\baselineskip}\vfill\captionof{figure}{Operativ performances}\label{fig:op}}]{dashboard/operative_performances.pdf}
 \end{landscape}
 \newpage
 
 \subsection{correlation}
+The page represented in \ref{fig:corr} contains the relationships between:
+\begin{itemize}
+  \item the cost and the income
+   \item the ratio I/C and the the commercial speed
+    \item ratio I/C and the suppression
+\end{itemize}
+From cost-income graph, it is clear that tbso has the worst economic situation because it spends a considerable amount of money per km, even if their introits are the lowest ones. For a better clearness, the median of costs and incomes is drawn.
+For the other two graphs, the ratio between income and cost is set as symbol of efficiency. With this hypothesis, it is possible to plot the relationship with suppressed rides and commercial speed in order to see if these two factors have influences on the performances of the companies. 
+The graph with the commercial speed as x-axis is emblematic. Excluding Sai that seems to be an outlier for its very good efficiency, despite its low commercial speed, for the other companies the correlation is striking: higher the speed is, better the economic efficiency is. 
+On the other side, the same thing can not be said for the suppressed lines. They do not seem to cause any problem to economic performance, indeed the companies that suffer more this problem are also the most efficient.
+Unfortunately, this kind of dashboard is difficult to deepen if this characteristics is maintained. It could be more interesting evaluating the single lines, since they are more influential on aspect such as commercial speed. From figure \ref{fig:corrlines} for example it is evident that not all the lines traveled by Tbso have high cost, but only V10. This should lead the company to work exclusively on understanding the problems that this line creates. On the other side, line V20, always under Tbso management, has incredibly bad performances about incomes. 
+
+
+
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{5\baselineskip}\vfill\captionof{figure}{Page about correlation}\label{fig:corr}}]{dashboard/correlation.pdf}
+\end{landscape}
+\newpage
+
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2.5\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:corrlines}}]{dashboard/correlation_2.pdf}
+\end{landscape}
+\newpage
+
 
 \subsection{income}
+
+\newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2.5\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:corrlines}}]{dashboard/income.pdf}
+\end{landscape}
