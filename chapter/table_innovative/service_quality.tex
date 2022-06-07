@@ -1,0 +1,22 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{lscape}
+\newpage
+\thispagestyle{empty}
+\begin{landscape}
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\rowcolor{bluepoli!40}
+\multicolumn{1}{|c|}{\textbf{KPI denomination}}                                                    & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Technologies \\ Used\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Unit of\\  Measure\end{tabular}}} & \multicolumn{1}{c|}{\textbf{Explanation}}                                                                                                                                                        \\ \hline
+\begin{tabular}[c]{@{}l@{}}Mean delay by time slot \\ (peak vs. off-peak) and ride\end{tabular}    & AVL, AVM                                                                                   & min                                                                                      & \begin{tabular}[c]{@{}l@{}}Understanding if a  \\delay is mainly caused \\ by the departing hour of the ride, \\ can help to modify   the schedule according to it\end{tabular}                    \\ \hline
+\begin{tabular}[c]{@{}l@{}}Visualization on where \\ the ride generates the delay\end{tabular}     & AVL, AVM                                                                                   & map                                                                                      & \begin{tabular}[c]{@{}l@{}}Deepening the   knowledge of the delay \\ can mean even \\better improvements \\ going to make specific   changes \\ in some section of the lines\end{tabular}          \\ \hline
+Lost costumers per   suppressed ride                                                               & APC, AVM                                                                                   & \#                                                                                       & \begin{tabular}[c]{@{}l@{}}Knowing how many   \\people are affected \\ by a suppressed ride\\ can help to assess \\ the importance of   that ride and an overall \\ level of discomfort\end{tabular} \\ \hline
+Delay amount over mm   of rain                                                                     & AVM, IoT                                                                                   & min/mm                                                                                   & \begin{tabular}[c]{@{}l@{}}Knowing the relation  \\ between delays and \\ weather conditions\\ is important to correctly \\ dimension the   problem\end{tabular}                                     \\ \hline
+\begin{tabular}[c]{@{}l@{}}Load Factor per run   \\ per time slot (peak vs. off-peak)\end{tabular} & APC, AVM                                                                                   & \%                                                                                       & \begin{tabular}[c]{@{}l@{}}Knowing the   percentage of load\\  for a particular run can help to allocate \\ better the resources\end{tabular}                                                    \\ \hline
+Load Factor vs.   Weather Condition                                                                & APC, IoT                                                                                   & \%                                                                                       & \begin{tabular}[c]{@{}l@{}}Also in this case, knowing \\   the behavior in\\ different weather condition \\ can help to allocate better the resources\end{tabular}                                 \\ \hline
+\end{tabular}
+\caption{List of new Service Quality KPIs}
+\label{tab:servicequality}
+\end{table}
+\end{landscape}

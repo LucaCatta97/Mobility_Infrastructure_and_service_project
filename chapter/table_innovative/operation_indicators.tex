@@ -1,0 +1,25 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{lscape}
+\newpage
+\thispagestyle{empty}
+% Please add the following required packages to your document preamble:
+% \usepackage{lscape}
+\begin{landscape}
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\rowcolor{bluepoli!40}
+\multicolumn{1}{|c|}{\textbf{KPI denomination}}                                                       & \multicolumn{1}{c|}{\textbf{Technologies Used}} & \multicolumn{1}{c|}{\textbf{Unit of Measure}} & \multicolumn{1}{c|}{\textbf{Explanation}}                                                                                                                                                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}Commercial speed \\ deviation   from mean\end{tabular}                     & AVL, AVM, historical   data                     & $\pm$ km/h                                    & \begin{tabular}[c]{@{}l@{}}Comparing real-time   \\ commercial speed with the mean \\ of historical data help understand, \\ together   with delays information, \\ where is the problem\end{tabular} \\ \hline
+Amount of km per day                                                                                  & AVM                                             & km                                            & Amount of kilometers   per day                                                                                                                                                                        \\ \hline
+Planned vs. Effective   kms                                                                           & AVM                                             & \%                                            & \begin{tabular}[c]{@{}l@{}}Comparison between   \\ planned km on schedule \\ and km effectively done in a day\end{tabular}                                                                            \\ \hline
+\begin{tabular}[c]{@{}l@{}}Mean time per stop   \\ (peak vs. off-peak)\end{tabular}                   & AVL                                             & sec                                           & \begin{tabular}[c]{@{}l@{}}Amount of time taken   at each stop to \\ loading and unloading the passengers\end{tabular}                                                                                \\ \hline
+\begin{tabular}[c]{@{}l@{}}Stop time in   relation to number \\ of people moved per stop\end{tabular} & AVL, APC                                        & \# of people / sec                            & \begin{tabular}[c]{@{}l@{}}As the one above but    comparing it \\ to the number of people \\ that   actually moved\end{tabular}                                                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}Commercial speed vs.\\ millimeters of rain/snow\end{tabular}               & AVL, IoT                                        & f(Km/h, mm)                                   & \begin{tabular}[c]{@{}l@{}}Comparison between mean  \\  commercial speed \\ of the ride and the amount \\ of rain fall in that period of   time\end{tabular}                                          \\ \hline
+\begin{tabular}[c]{@{}l@{}}Commercial speed vs. \\ Fuel Consumption or $CO_2$ produced\end{tabular}   & AVL, AVM                                        & (km/h)/kWh, (km/h)/$tons_{CO\_2}$           & \begin{tabular}[c]{@{}l@{}}Helps understand the   driving behavior \\ of the drivers among with the points \\ where to optimize it\end{tabular}                                                       \\ \hline
+\end{tabular}
+\caption{List of new Operational KPIs}
+\label{tab:operation_indication}
+\end{table}
+\end{landscape}

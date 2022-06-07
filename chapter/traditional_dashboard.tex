@@ -1,6 +1,7 @@
 \chapter{Analysis on the provided data}
+\label{ch:dashboard}
 %The dashboard created on PowerBI 
-From the KPIs founded in the analysis of the contract we decide to visualize them by creating an off-line dashboard with PowerBi to find other useful information that without visualization could go on the background.
+An off-line dashboard with PowerBi is created to discover useful information that without visualization could go on the background.
 
 \section{Data cleaning}
 Before importing the data, a cleaning of the provided data set must be made to adapt it for the final purpose. 
@@ -37,7 +38,7 @@ The table 'Suppressed rides' is related with 'Companies' through the companies' 
 Starting from these tables, a dashboard is designed. It will be divided in subcategories that differ each other for the topic shown. In particular, the themes approached are:
 \begin{itemize}
 \item Suppressed rides
-\item Emissions
+\item Bus requirements
 \item Operative performances
 \item KPIs correlation
 \item Economics
@@ -62,7 +63,7 @@ The table on the bottom right shows the number of rides traveled per each ride s
 
 The pie chart has the goal of showing how the different causes affects suppressed rides, while the histogram shows the total suppressed rides for each year divided by company. 
 
-Considering the dashboard without applying any filter, some considerations can be already done. In 2017 Sab/ai had a huge issue with suppressed rides that reached a percentage level double than the second highest one, in the analyzed period. In 2017 and 2018 Sai and Zani had no problems and their suppressed rides are equal to zero. Finally, Agi had a ever increasing problem related to suppressed rides. 
+Considering the dashboard without applying any filter, some considerations can be already done. In 2017 Sab/ai had a huge issue with suppressed rides that reached a percentage level double than the second highest one, in the analyzed period. In 2017 and 2018 Sai and Zani had no problems and their suppressed rides were equal to zero. Finally, Agi had a ever increasing problem related to suppressed rides. 
 
 Moreover, the main cause that brings to a suppressed ride is strike followed at a distance by failure happened during service and inconvenience due to drivers during service. 
 
@@ -163,19 +164,30 @@ This result, if combined with the timetable of the service (not provided) can he
 \end{landscape}
 \newpage
 
-\subsection{correlation}
+\subsection{Correlation}
 The page represented in \ref{fig:corr} contains the relationships between:
 \begin{itemize}
   \item the cost and the income
    \item the ratio I/C and the the commercial speed
     \item ratio I/C and the suppression
 \end{itemize}
-From cost-income graph, it is clear that tbso has the worst economic situation because it spends a considerable amount of money per km, even if their introits are the lowest ones. For a better clearness, the median of costs and incomes is drawn.
+From cost-income graph, it is clear that Tbso has the worst economic situation because it spends a considerable amount of money per km, even if their introits are the lowest ones. For a better clearness, the median of costs and incomes is drawn.
 For the other two graphs, the ratio between income and cost is set as symbol of efficiency. With this hypothesis, it is possible to plot the relationship with suppressed rides and commercial speed in order to see if these two factors have influences on the performances of the companies. 
 The graph with the commercial speed as x-axis is emblematic. Excluding Sai that seems to be an outlier for its very good efficiency, despite its low commercial speed, for the other companies the correlation is striking: higher the speed is, better the economic efficiency is. 
-On the other side, the same thing can not be said for the suppressed lines. They do not seem to cause any problem to economic performance, indeed the companies that suffer more this problem are also the most efficient.
-Unfortunately, this kind of dashboard is difficult to deepen if this characteristics is maintained. It could be more interesting evaluating the single lines, since they are more influential on aspect such as commercial speed. From figure \ref{fig:corrlines} for example it is evident that not all the lines traveled by Tbso have high cost, but only V10. This should lead the company to work exclusively on understanding the problems that this line creates. On the other side, line V20, always under Tbso management, has incredibly bad performances about incomes. 
+On the other side, the same thing can not be said for the suppressed lines. They do not seem to cause any issue to economic performance, indeed the companies that suffer more this problem are also the most efficient.
+Unfortunately, this kind of dashboard is difficult to deepen if this characteristics are maintained. It could be more interesting evaluating the single lines, since they are more influenced on aspect such as commercial speed. From figure \ref{fig:corrlines} for example, it is evident that not all the lines traveled by Tbso have high cost, but only V10. This should lead the company to work on understanding the problems that this line creates. On the other side, line V20, always under Tbso management, has incredibly bad performances about incomes. 
+The two lines that indicate the median cost and the median income become useful to divide the lines in four categories:
+\begin{enumerate}
+\item The best: high income, low cost
+\item The satisfactory: high income, high cost
+\item The improvable: low income, low cost
+\item The worst: low income, high cost
+\end{enumerate}
+The lines that belong to the last category are the aforementioned line V10 and line F (Bergamo - Treviglio). 
+On the other side, the best performances are obtained by line V, and this is curious because its underlines V10 and V20 have huge problems, line R (Bergamo-Soncino) and line U (Bergamo -Treviglio). 
+It is interesting that the correlation between commercial speed and economic efficiency disappears when the situation is analyzed considering the single lines. Probably, since some lines are managed by more than one company, the society that controls the service has a big impact on the economic performances.
 
+Focusing on 2020, a disastrous year for the transport sector, it is possible to notice that the efficiency of each line is stable, without any substantial difference determined by commercial speed. This could be a symptom of Covid-19 that hit equally every companies. The graph on the right shows that the median of incomes slightly decreased, while the median of costs considerably increased respect to the three-years period 2017/19 of the previous dashboard. In order to have a clearer idea of the performances, a comparison of the selected year with the two years before can be seen. In 2020, the disaster is evident. The costs grew by 13$\%$ respect 2019, probably because the higher incidence of fixed costs, but the dramatic data is about incomes that dropped by 35$\%$. Consequently, the efficiency decreased by 42$\%$. An interesting aspect is that the commercial speed did not rise hugely, despite of the lockdown period in which streets were empty. 
 
 
 
@@ -193,12 +205,16 @@ Unfortunately, this kind of dashboard is difficult to deepen if this characteris
 \includepdf[angle=90, pagecommand={\null\enlargethispage{2.5\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:corrlines}}]{dashboard/correlation_2.pdf}
 \end{landscape}
 \newpage
+\begin{landscape}
+\thispagestyle{empty}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{3\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:corrlines2}}]{dashboard/correlation_without_year.pdf}
+\end{landscape}
 
-
-\subsection{income}
-
+\subsection{Income}
+The last part of the dashboard is about a large picture of the economic situation. The screenshot that is shown at the following page \ref{fig:income} is one of the many example in which this kind of graph could be shown. It shows the economic efficiency of the entire Consortium in the last 10 years, but then it focuses on the performances of a set of lines and finally it shows their situation in the desired period. In the example, a spotlight on Arriva situation. Arriva manages three lines: M (Bergamo - Crema), Q (Bergamo Chiari) and R (Bergamo - Soncino). Two of them, M and R have performces above the average, while line Q has serious problems in economic efficiency. Finally, a focus on line M shows that the economic situation on that line is slowly improving. 
+On the right side of the page, two graphs about incomes and costs per kilometer in the last decade. In particular the ones in the figure TAGAAAA refer to M line. The graphs evidence that the increasing economic efficiency of this line happened because of a constant incomes growth, while, on the other hand, the costs were stable with a drop in 2014. The 2020 disaster is confirmed once more by the dramatic decrease of incomes and the consistent increase of costs.
 \newpage
 \begin{landscape}
 \thispagestyle{empty}
-\includepdf[angle=90, pagecommand={\null\enlargethispage{2.5\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:corrlines}}]{dashboard/income.pdf}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2.5\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:income}}]{dashboard/income.pdf}
 \end{landscape}

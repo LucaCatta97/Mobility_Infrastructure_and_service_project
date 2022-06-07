@@ -54,6 +54,7 @@
 \usepackage{xcolor} % Coloured captions
 \usepackage{amsthm,thmtools,xcolor} % Coloured "Theorem"
 \usepackage{float}
+\usepackage{wrapfig}
 
 % STANDARD MATH PACKAGES
 \usepackage{amsmath}
@@ -68,10 +69,26 @@
 \usepackage{tabularx}
 \usepackage{longtable} % Tables that can span several pages
 \usepackage{colortbl}
-
+\usepackage{multirow}
+\usepackage{longtable}
 % PACKAGES FOR ALGORITHMS (PSEUDO-CODE)
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{blindtext}
+
+
+\usepackage[absolute]{textpos}
+\usepackage{fancyhdr}
+\fancypagestyle{lscape}{% 
+\fancyhf{} % clear all header and footer fields 
+\fancyfoot[LE]{%
+\begin{textblock}{20}(1,5){\rotatebox{90}{\leftmark}}\end{textblock}
+\begin{textblock}{1}(13,10.5){\rotatebox{90}{\thepage}}\end{textblock}}
+\fancyfoot[LO] {%
+\begin{textblock}{1}(13,10.5){\rotatebox{90}{\thepage}}\end{textblock}
+\begin{textblock}{20}(1,13.25){\rotatebox{90}{\rightmark}}\end{textblock}}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}}
 
 
 % PACKAGES FOR REFERENCES & BIBLIOGRAPHY
@@ -204,6 +221,7 @@
 \input{chapter/State_of_the_Art.tex}
 \input{chapter/Contract_of_service.tex}
 \input{chapter/traditional_dashboard.tex}
+\input{chapter/intro_innovative}
 \input{chapter/innovative.tex}
 
 
@@ -212,7 +230,7 @@
 %-------------------------------------------------------------------------
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
-\bibliography{Thesis_bibliography} % The references information are stored in the file named "Thesis_bibliography.bib"
+\bibliography{references} % The references information are stored in the file named "Thesis_bibliography.bib"
 \nocite{*}
 
 %-------------------------------------------------------------------------
