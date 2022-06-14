@@ -1,0 +1,29 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|l|}
+\hline
+\rowcolor{bluepoli!40}
+\multicolumn{1}{|c|}{\textbf{KPI Name}} &
+  \textbf{period} &
+  \multicolumn{1}{c|}{\textbf{Unit of measure}} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Specific energy\\  consumption along \\ the on-sitehydrogen supply chain\end{tabular} &
+  \multicolumn{1}{l|}{Monthly, annually and overall} &
+  kWh/kg \\ \hline
+Cost of hydrogen dispensed &
+  \multirow{3}{*}{Annually and overall} &
+  €/kg hydrogen dispensed \\ \cline{1-1} \cline{3-3} 
+\begin{tabular}[c]{@{}l@{}}Number of incidents \\ affecting fuel quality\end{tabular} &
+   &
+  \# \\ \cline{1-1} \cline{3-3} 
+Specific nitrogen consumption &
+   &
+  kg/tone dispensed \\ \hline
+\end{tabular}%
+}
+\caption{Performance indicators of the HRS}
+\label{tab:hrs}
+\end{table}

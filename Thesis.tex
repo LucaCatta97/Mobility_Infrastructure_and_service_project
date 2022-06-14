@@ -27,6 +27,8 @@
 \setlength\columnsep{15pt} % Column separation in executive summary
 \setlength\parindent{0pt} % Indentation
 \raggedbottom  
+\usepackage{silence}
+
 
 % PACKAGES FOR TITLES
 \usepackage{titlesec}
@@ -109,6 +111,7 @@
 \usepackage{afterpage}
 \usepackage{lipsum} % DUMMY PACKAGE
 \usepackage{fancyhdr} % For the headers
+\usepackage{xcolor}
 \fancyhf{}
 \usepackage{eurosym}
 
@@ -166,15 +169,15 @@
 	      \vspace{0.2 cm}\\
 	      Chiara Beretta \hspace{2,2 cm} 10615536 \\ 
           \vspace{0.01 cm}  \\   
-          Seyed Hesam Babaei \hspace{0,99 cm} 10780315 \\ 
+          Seyed Hesam Babaei \hspace{0,98 cm} 10780315 \\ 
           \vspace{0.01 cm}\\ 
-          Luca Cattaneo \hspace{2,2 cm} 10521219 \\ 
+          Luca Cattaneo \hspace{2,3 cm} 10521219 \\ 
           \vspace{0.01 cm}\\          
-          Pietro Mariano \hspace{2,1 cm} 10529938 \\
+          Pietro Mariano \hspace{2,2 cm} 10502703 \\
           \vspace{0.01 cm}\\
-          Fabio Vitiello \hspace{2,5 cm} 10529938, % Author Name and Surname
+          Fabio Vitiello \hspace{2,6 cm} 10529938, % Author Name and Surname
 	course= MOBILITY: INFRASTRUCTURES AND SERVICES , % Study Programme (in Italian)
-	academicyear={2021-2022},  % Academic Year
+	academicyear={2021/2022},  % Academic Year
 } % These info will be put into your Title page 
 
 %----------------------------------------------------------------------------
@@ -185,7 +188,7 @@
 
 % ABSTRACT IN ENGLISH
 
-\include{Chapters/00_Abstract}
+%\include{Chapters/00_Abstract}
 
 %----------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES/SYMBOLS
@@ -217,12 +220,12 @@
 % --------------------------------------------------------------------------
 % NUMBERED CHAPTERS % Regular chapters following
 % --------------------------------------------------------------------------
-\input{chapter/introduction.tex}
-\input{chapter/State_of_the_Art.tex}
-\input{chapter/Contract_of_service.tex}
-\input{chapter/traditional_dashboard.tex}
-\input{chapter/intro_innovative}
-\input{chapter/innovative.tex}
+\input{chapter/1_Introduction}
+\input{chapter/2_State_of_the_Art}
+\input{chapter/3_Contract_of_Service}
+\input{chapter/4_Traditional_Dashboard}
+\input{chapter/5_Innovative_KPIs}
+\input{chapter/Conclusion}
 
 
 %-------------------------------------------------------------------------

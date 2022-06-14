@@ -110,10 +110,8 @@
 			\vfill
 			%\begin{minipage}{0.95\textwidth}
 			\begin{minipage}{0.9\textwidth}
-            \includegraphics[trim={1.2cm 0 0 0},clip, width=0.4\textwidth]{Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO.eps}\\
-            \includegraphics[trim={0 0 0 0},clip, width=0.3\textwidth]{Images/arriva-vector-logo.png}\\
-            \includegraphics[trim={0 0 0 0},clip, width=0.3\textwidth]{Images/logo_NET-Engineering.png}\\
-            \includegraphics[trim={0 0 0 0},clip, width=0.3\textwidth]{Images/systematica_rgb_red-01.png}
+            \includegraphics[trim={0 0 0 0},clip, width=0.4\textwidth]{Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO.eps}\\
+            \includegraphics[trim={0 0 0 0},clip, width=0.4\textwidth]{Images/logo_mix.png}\\
             \hfill
             \\
 			\vspace{1cm}

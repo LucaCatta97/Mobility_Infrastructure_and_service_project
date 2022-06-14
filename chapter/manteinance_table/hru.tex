@@ -1,0 +1,26 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}[p]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|l|}
+\hline
+\rowcolor{bluepoli!40}
+\multicolumn{1}{|c|}{\textbf{KPI Name}} &
+  \textbf{period} &
+  \multicolumn{1}{c|}{\textbf{Unit of measure}} \\ \hline
+Availabilityof the HRU        & \multirow{2}{*}{Monthly,annually and overall} & \%     \\ \cline{1-1} \cline{3-3} 
+HPUdowntime                   &                                               & hours  \\ \hline
+Mean timebetween failures     & \multicolumn{1}{l|}{Annuallyand overall}      & hours  \\ \hline
+Reliabilityof the HRU         & \multirow{4}{*}{Monthly,annually and overall} & \%     \\ \cline{1-1} \cline{3-3} 
+\begin{tabular}[c]{@{}l@{}}Amount ofhydrogen dispensed \\ to the project buses overall and per bus\end{tabular} &
+   &
+  kg \\ \cline{1-1} \cline{3-3} 
+Specificpower consumption HRU &                                               & kWh/kg \\ \cline{1-1} \cline{3-3} 
+Speed ofdispensing            &                                               & kg/min \\ \hline
+\end{tabular}%
+}
+\caption{Performance indicators of the HRU}
+\label{tab:hru}
+\end{table}

@@ -1,30 +1,24 @@
 \chapter{Analysis on the provided data}
 \label{ch:dashboard}
 %The dashboard created on PowerBI 
-An off-line dashboard with PowerBi is created to discover useful information that without visualization could go on the background.
+An off-line dashboard with PowerBI is created to discover useful information that without visualization could go lost in the background.
 
 \section{Data cleaning}
-Before importing the data, a cleaning of the provided data set must be made to adapt it for the final purpose. 
+Before importing the data, a cleaning of the provided dataset must be made to adapt it for the final purpose. 
 
-The main problem is the absence of a field for the dates. For example, data about kilometers run by each member of the consortium were provided as an excel file for each year considered and each file, in turn, was divided in 12 worksheet, one for each operative month. PowerBi needs a reference to join data and to create relationship between different data set, and for this reason, a key about date was created.  
+The main problem is the absence of a field for dates. For example, data about kilometers run by each member of the consortium were provided as an excel file for each year considered and each file, in turn, was divided in 12 worksheet, one for each operative month. PowerBI needs a reference to join data and to create relationship between different data set, and for this reason, a key about date was created.  
 
-\begin{comment}
-\begin{listing}
-\inputminted{python}{chapter/code/total_per_month_year.py}
-\caption{Code for the merge of the Controllo di gestione}
-\label{list:KM_BTS}
-\end{listing}
-\end{comment}
+
 \section{ER model}
-A Entity–relationship model is provided (\ref{fig:ER}) to show the relationships between the different tables.
+An Entity–Relationship model it's been created, to set the relationships between the different tables, as shown in the figure (\ref{fig:ER}).
 
-In detail, the table 'Companies' represents the monthly journeys provided by the Consortium, divided for each companies, from which data about commercial speed and number of rides traveled are extracted for each line. 
+In detail, the table \textit{'Companies'} represents the monthly journeys provided by the Consortium, divided for each companies, from which data about commercial speed and number of rides traveled are extracted for each line. 
 
-The table 'Suppressed rides' is related with 'Companies' through the companies' name. This table gives several information about the events that had as consequence the suppression of a ride; in particular between years 2017 and 2019, it declares the reason for which the ride was suppressed, the line and the company that are associated to that ride. 
+The table \textit{'Suppressed rides'} is related with \textit{'Companies'} through the companies' name. This table gives several information about the events related to the suppression of a ride; in particular between years 2017 and 2019, it declares the reason for why the ride was suppressed, the line and the company associated to that ride. 
 
-'Multi\_Year' is a table related with 'Companies' through line code and it shows introits and costs per kilometer for each line. 
+\textit{'Multi\_Year'} is a table related with \textit{'Companies'} through line code and it shows introits and costs per kilometer for each line. 
 
-'Flotta' is a table without any relationship and it shows the data about Consortium's fleet for each year between 2018 and 2020 in terms of: emissions and kind of fuel used by each bus, if the bus has air condition, if the bus is equipped for transporting disable people and the age of each bus.
+\textit{'Flotta'} is a table without any relationship and it shows the data about Consortium's fleet for each year between 2018 and 2020 in terms of: emissions and kind of fuel used by each bus, if the bus has air condition, if the bus is equipped for transporting disable people and the age of each bus.
 
 
 \begin{figure}[h]
@@ -44,11 +38,12 @@ Starting from these tables, a dashboard is designed. It will be divided in subca
 \item Economics
 \end{itemize}
 \subsection{Suppressed rides}
-In the following page has been presented the dashboard
+In figure \ref{fig:sup} has been presented the dashboard.
 \newpage
+\WarningsOff
 \begin{landscape}
 \thispagestyle{empty}
-\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Suppressed}}]{dashboard/Suppression.pdf}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{2\baselineskip}\vfill\captionof{figure}{Suppressed}\label{fig:sup}}]{dashboard/Suppression.pdf}
 \end{landscape}
 \newpage
 As said before, data about suppressed rides are between 2017 and 2019. An area of this part of the page is dedicated to filters, thanks to which data can be visualized according to:
@@ -91,6 +86,7 @@ Filtering data according to failure happened during service, a very interesting 
 \subsection{Fleet}
 
 The second part of the dashboard regards an overview of the fleet based on the aspect that are underlined in the contract of service and that should be considered as constraint for a good fleet management, even if not all of them brings directly to a penalty from the Public Transport Authority. 
+
 In particular, in the contract the PTA requires the following fleet criteria:
 \begin{itemize}
 \item $100\%$ buses must be air-conditioned
@@ -108,7 +104,9 @@ The figure \ref{fig:fleet}
 shows the fleet situation in 2020, that is the most recent situation available. Data about 2018 and 2019 fleet are also available, so that comparison between these years can be done. Each aspect listed before is summed up in a pie chart that let a clear visualization of the situation.
 
 Beginning from the good aspects, the entire fleet uses an eco-diesel fuel and almost every bus is equipped to allow the transport of people with reduced mobility. 
+
 In Italy the average fleet age is about 12 years\cite{rossiPTM}, but in 2020 the Consortium results are even better with an average age of about 10 years. Despite this, 10 buses have an age that obliges them to suffer travel limitations and the $13\%$ in the immediate future will be in this situation. 
+
 On the other side, as much as 8 buses are not equipped with air conditioning and, according to the contract of service, they should not travel. Finally, it is possible analyze the fleet according to their emission category. The requirements set by the contract ($62\%$) are widely satisfied, but the improvement margin is really high since the $30\%$ of the fleet has an high polluting engine. 
 
 
@@ -120,6 +118,7 @@ On the other side, as much as 8 buses are not equipped with air conditioning and
 \newpage
 
 In the figure \ref{fig:fleetold}  a focus on the oldest part of the fleet in 2020, the one that has constraint on traveled kilometers. 
+
 It can be seen that the majority of those buses are also the ones that are not air-conditioned, so, if they are replaced with new ones, two bad situations can be improved . Moreover, two of the three buses not equipped for people with reduced mobility belongs to this category. Unfortunately, if they are removed, an important percentage of not polluting buses would be lost. In fact, the $5\%$ of the fleet is composed of old buses with a swapped engine in order to respect contract limitations. Finally, the presence of buses with an age over 17 years is really increased respect to 2018, with a rise of over $200\%$.
 
 
@@ -141,7 +140,9 @@ The third dashboard (figure \ref{fig:fleetinquinanti}) is a focus on the most po
 
 \subsection{Operative performances}
 The aim of this page is to present the ratio of rides made by the companies of the consortium. 
+
 In the bottom part of the figure \ref{fig:op} there are two filters that allow the selection of Lines and Years.
+
 Above them,  the average of the percentage of rides made by the companies\footnote{the reader can argue that some of the companies has a percentage of ride made up to $100\%$ but they had suppression in the previous page. This is due to the fact that the quantity of suppression is very low with respect to the rides made each month by the companies. For this reason in the data can have been approximated}. Moreover, these data include 2020 and 2021, so companies with good performances before could have suffered diseases due to Covid-19. On the right, the commercial speed divided by lines is shown.
 
 Finally, on the top the correlation between the average percentage of rides made and the commercial speed per companies.
@@ -164,7 +165,7 @@ This result, if combined with the timetable of the service (not provided) can he
 \end{landscape}
 \newpage
 
-\subsection{Correlation}
+\subsection{KPIs Correlation}
 The page represented in \ref{fig:corr} contains the relationships between:
 \begin{itemize}
   \item the cost and the income
@@ -172,10 +173,15 @@ The page represented in \ref{fig:corr} contains the relationships between:
     \item ratio I/C and the suppression
 \end{itemize}
 From cost-income graph, it is clear that Tbso has the worst economic situation because it spends a considerable amount of money per km, even if their introits are the lowest ones. For a better clearness, the median of costs and incomes is drawn.
+
 For the other two graphs, the ratio between income and cost is set as symbol of efficiency. With this hypothesis, it is possible to plot the relationship with suppressed rides and commercial speed in order to see if these two factors have influences on the performances of the companies. 
+
 The graph with the commercial speed as x-axis is emblematic. Excluding Sai that seems to be an outlier for its very good efficiency, despite its low commercial speed, for the other companies the correlation is striking: higher the speed is, better the economic efficiency is. 
+
 On the other side, the same thing can not be said for the suppressed lines. They do not seem to cause any issue to economic performance, indeed the companies that suffer more this problem are also the most efficient.
+
 Unfortunately, this kind of dashboard is difficult to deepen if this characteristics are maintained. It could be more interesting evaluating the single lines, since they are more influenced on aspect such as commercial speed. From figure \ref{fig:corrlines} for example, it is evident that not all the lines traveled by Tbso have high cost, but only V10. This should lead the company to work on understanding the problems that this line creates. On the other side, line V20, always under Tbso management, has incredibly bad performances about incomes. 
+
 The two lines that indicate the median cost and the median income become useful to divide the lines in four categories:
 \begin{enumerate}
 \item The best: high income, low cost
@@ -184,17 +190,16 @@ The two lines that indicate the median cost and the median income become useful 
 \item The worst: low income, high cost
 \end{enumerate}
 The lines that belong to the last category are the aforementioned line V10 and line F (Bergamo - Treviglio). 
-On the other side, the best performances are obtained by line V, and this is curious because its underlines V10 and V20 have huge problems, line R (Bergamo-Soncino) and line U (Bergamo -Treviglio). 
+On the other side, the best performances are obtained by line V, and this is curious because its underlines V10 and V20 have huge problems, line R (Bergamo - Soncino) and line U (Bergamo - Treviglio). 
+
 It is interesting that the correlation between commercial speed and economic efficiency disappears when the situation is analyzed considering the single lines. Probably, since some lines are managed by more than one company, the society that controls the service has a big impact on the economic performances.
 
 Focusing on 2020, a disastrous year for the transport sector, it is possible to notice that the efficiency of each line is stable, without any substantial difference determined by commercial speed. This could be a symptom of Covid-19 that hit equally every companies. The graph on the right shows that the median of incomes slightly decreased, while the median of costs considerably increased respect to the three-years period 2017/19 of the previous dashboard. In order to have a clearer idea of the performances, a comparison of the selected year with the two years before can be seen. In 2020, the disaster is evident. The costs grew by 13$\%$ respect 2019, probably because the higher incidence of fixed costs, but the dramatic data is about incomes that dropped by 35$\%$. Consequently, the efficiency decreased by 42$\%$. An interesting aspect is that the commercial speed did not rise hugely, despite of the lockdown period in which streets were empty. 
 
-
-
 \newpage
 \begin{landscape}
 \thispagestyle{empty}
-\includepdf[angle=90, pagecommand={\null\enlargethispage{5\baselineskip}\vfill\captionof{figure}{Page about correlation}\label{fig:corr}}]{dashboard/correlation.pdf}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{3\baselineskip}\vfill\captionof{figure}{Page about correlation}\label{fig:corr}}]{dashboard/correlation.pdf}
 \end{landscape}
 \newpage
 
@@ -202,7 +207,7 @@ Focusing on 2020, a disastrous year for the transport sector, it is possible to 
 \newpage
 \begin{landscape}
 \thispagestyle{empty}
-\includepdf[angle=90, pagecommand={\null\enlargethispage{2.5\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:corrlines}}]{dashboard/correlation_2.pdf}
+\includepdf[angle=90, pagecommand={\null\enlargethispage{3\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:corrlines}}]{dashboard/correlation_2.pdf}
 \end{landscape}
 \newpage
 \begin{landscape}
@@ -211,10 +216,12 @@ Focusing on 2020, a disastrous year for the transport sector, it is possible to 
 \end{landscape}
 
 \subsection{Income}
-The last part of the dashboard is about a large picture of the economic situation. The screenshot that is shown at the following page \ref{fig:income} is one of the many example in which this kind of graph could be shown. It shows the economic efficiency of the entire Consortium in the last 10 years, but then it focuses on the performances of a set of lines and finally it shows their situation in the desired period. In the example, a spotlight on Arriva situation. Arriva manages three lines: M (Bergamo - Crema), Q (Bergamo Chiari) and R (Bergamo - Soncino). Two of them, M and R have performces above the average, while line Q has serious problems in economic efficiency. Finally, a focus on line M shows that the economic situation on that line is slowly improving. 
-On the right side of the page, two graphs about incomes and costs per kilometer in the last decade. In particular the ones in the figure TAGAAAA refer to M line. The graphs evidence that the increasing economic efficiency of this line happened because of a constant incomes growth, while, on the other hand, the costs were stable with a drop in 2014. The 2020 disaster is confirmed once more by the dramatic decrease of incomes and the consistent increase of costs.
+The last part of the dashboard is about a large picture of the economic situation. The screenshot that is shown at the following page \ref{fig:income} is one of the many example in which this kind of graph could be shown. It shows the economic efficiency of the entire Consortium in the last 10 years, but then it focuses on the performances of a set of lines and finally it shows their situation in the desired period. In the example, a spotlight on Arriva situation. Arriva manages three lines: M (Bergamo - Crema), Q (Bergamo - Chiari) and R (Bergamo - Soncino). Two of them, M and R have performances above the average, while line Q has serious problems in economic efficiency. Finally, a focus on line M shows that the economic situation on that line is slowly improving. 
+
+On the right side of the page, two graphs about incomes and costs per kilometer in the last decade. In particular the ones in the figure \ref{fig:income} refer to M line. The graphs evidence that the increasing economic efficiency of this line happened because of a constant incomes growth, while, on the other hand, the costs were stable with a drop in 2014. The 2020 disaster is confirmed once more by the dramatic decrease of incomes and the consistent increase of costs.
 \newpage
 \begin{landscape}
 \thispagestyle{empty}
 \includepdf[angle=90, pagecommand={\null\enlargethispage{2.5\baselineskip}\vfill\captionof{figure}{Percentage difference}\label{fig:income}}]{dashboard/income.pdf}
 \end{landscape}
+\WarningsOn
